@@ -1,0 +1,37 @@
+# Nmap 7.94SVN scan initiated Tue Jul 23 07:46:22 2024 as: nmap -sS -sV -vvv -p- -T4 -oA ./Scans/NmapFirstScan -O 10.0.2.9
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.1 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?.*\r\nServer: Virata-EmWeb/R([\d_]+)\r\nContent-Type: text/html; ?charset=UTF-8\r\nExpires: .*<title>HP (Color |)LaserJet ([\w._ -]+)&nbsp;&nbsp;&nbsp;'
+Nmap scan report for 10.0.2.9 (10.0.2.9)
+Host is up, received arp-response (0.0026s latency).
+Scanned at 2024-07-23 07:46:22 +03 for 75s
+Not shown: 65530 closed tcp ports (reset)
+PORT      STATE SERVICE     REASON         VERSION
+80/tcp    open  http        syn-ack ttl 64 Apache httpd 2.4.51 ((Debian))
+139/tcp   open  netbios-ssn syn-ack ttl 64 Samba smbd 4.6.2
+445/tcp   open  netbios-ssn syn-ack ttl 64 Samba smbd 4.6.2
+10000/tcp open  http        syn-ack ttl 64 MiniServ 1.981 (Webmin httpd)
+20000/tcp open  http        syn-ack ttl 64 MiniServ 1.830 (Webmin httpd)
+MAC Address: 08:00:27:F9:52:FC (Oracle VirtualBox virtual NIC)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.8
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=7/23%OT=80%CT=1%CU=40428%PV=Y%DS=1%DC=D%G=Y%M=08002
+OS:7%TM=669F35E9%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10A%TI=Z%CI=Z%I
+OS:I=I%TS=A)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW
+OS:7%O5=M5B4ST11NW7%O6=M5B4ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88
+OS:%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%
+OS:S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%
+OS:RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W
+OS:=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+OS:U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%D
+OS:FI=N%T=40%CD=S)
+
+Uptime guess: 45.204 days (since Sat Jun  8 02:53:30 2024)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jul 23 07:47:37 2024 -- 1 IP address (1 host up) scanned in 75.14 seconds

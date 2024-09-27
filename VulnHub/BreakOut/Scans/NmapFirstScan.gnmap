@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Tue Jul 23 07:46:22 2024 as: nmap -sS -sV -vvv -p- -T4 -oA ./Scans/NmapFirstScan -O 10.0.2.9
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.0.2.9 (10.0.2.9)	Status: Up
+Host: 10.0.2.9 (10.0.2.9)	Ports: 80/open/tcp//http//Apache httpd 2.4.51 ((Debian))/, 139/open/tcp//netbios-ssn//Samba smbd 4.6.2/, 445/open/tcp//netbios-ssn//Samba smbd 4.6.2/, 10000/open/tcp//http//MiniServ 1.981 (Webmin httpd)/, 20000/open/tcp//http//MiniServ 1.830 (Webmin httpd)/	Ignored State: closed (65530)	OS: Linux 4.15 - 5.8	Seq Index: 257	IP ID Seq: All zeros
+# Nmap done at Tue Jul 23 07:47:37 2024 -- 1 IP address (1 host up) scanned in 75.14 seconds
