@@ -1,0 +1,13 @@
+/images              [36m (Status: 301)[0m [Size: 317][34m [--> http://192.168.31.254/images/][0m
+/uploads             [36m (Status: 301)[0m [Size: 318][34m [--> http://192.168.31.254/uploads/][0m
+/css                 [36m (Status: 301)[0m [Size: 314][34m [--> http://192.168.31.254/css/][0m
+/template            [36m (Status: 301)[0m [Size: 319][34m [--> http://192.168.31.254/template/][0m
+/core                [36m (Status: 301)[0m [Size: 315][34m [--> http://192.168.31.254/core/][0m
+/install             [36m (Status: 301)[0m [Size: 318][34m [--> http://192.168.31.254/install/][0m
+/manual              [36m (Status: 301)[0m [Size: 317][34m [--> http://192.168.31.254/manual/][0m
+/js                  [36m (Status: 301)[0m [Size: 313][34m [--> http://192.168.31.254/js/][0m
+/javascript          [36m (Status: 301)[0m [Size: 321][34m [--> http://192.168.31.254/javascript/][0m
+/sf                  [36m (Status: 301)[0m [Size: 313][34m [--> http://192.168.31.254/sf/][0m
+/backups             [36m (Status: 301)[0m [Size: 318][34m [--> http://192.168.31.254/backups/][0m
+/batch               [36m (Status: 301)[0m [Size: 316][34m [--> http://192.168.31.254/batch/][0m
+/server-status       [33m (Status: 403)[0m [Size: 279]

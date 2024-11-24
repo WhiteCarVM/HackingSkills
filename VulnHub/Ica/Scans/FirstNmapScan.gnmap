@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Wed Sep  4 08:05:22 2024 as: nmap -sS -sV -v -p- -T4 -A -oA FirstNmapScan 192.168.123.124
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 192.168.123.124 ()	Status: Up
+Host: 192.168.123.124 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.4p1 Debian 5 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.48 ((Debian))/, 3306/open/tcp//mysql//MySQL 8.0.26/, 33060/open/tcp//mysqlx?///	Ignored State: closed (65531)	OS: Linux 4.15 - 5.8	Seq Index: 261	IP ID Seq: All zeros
+# Nmap done at Wed Sep  4 08:05:53 2024 -- 1 IP address (1 host up) scanned in 30.95 seconds

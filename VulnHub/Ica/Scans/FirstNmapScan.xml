@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Wed Sep  4 08:05:22 2024 as: nmap -sS -sV -v -p- -T4 -A -oA FirstNmapScan 192.168.123.124 -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -v -p- -T4 -A -oA FirstNmapScan 192.168.123.124" start="1725426322" startstr="Wed Sep  4 08:05:22 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1725426322"/>
+<taskend task="NSE" time="1725426322"/>
+<taskbegin task="NSE" time="1725426322"/>
+<taskend task="NSE" time="1725426322"/>
+<taskbegin task="NSE" time="1725426322"/>
+<taskend task="NSE" time="1725426322"/>
+<taskbegin task="ARP Ping Scan" time="1725426322"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.123.124" addrtype="ipv4"/>
+<address addr="08:00:27:3C:A0:71" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="ARP Ping Scan" time="1725426322" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1725426323"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1725426323"/>
+<taskbegin task="SYN Stealth Scan" time="1725426323"/>
+<taskend task="SYN Stealth Scan" time="1725426337" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1725426337"/>
+<taskend task="Service scan" time="1725426349" extrainfo="4 services on 1 host"/>
+<taskbegin task="NSE" time="1725426350"/>
+<taskend task="NSE" time="1725426352"/>
+<taskbegin task="NSE" time="1725426352"/>
+<taskend task="NSE" time="1725426353"/>
+<taskbegin task="NSE" time="1725426353"/>
+<taskend task="NSE" time="1725426353"/>
+<host starttime="1725426323" endtime="1725426353"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.123.124" addrtype="ipv4"/>
+<address addr="08:00:27:3C:A0:71" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65531">
+<extrareasons reason="reset" count="65531" proto="tcp" ports="1-21,23-79,81-3305,3307-33059,33061-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="8.4p1 Debian 5" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 0e:77:d9:cb:f8:05:41:b9:e4:45:71:c1:01:ac:da:93 (RSA)&#xa;  256 40:51:93:4b:f8:37:85:fd:a5:f4:d7:27:41:6c:a0:a5 (ECDSA)&#xa;  256 09:85:60:c5:35:c1:4d:83:76:93:fb:c7:f0:cd:7b:8e (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQCXOd91pBvAeK0CKaRrhpY2TcbujCX4hxoP5/K/fZWGV6qn6HeOopROacEm9L9nHkGfhZyk5v9mA4FWBtPMjHUAfms8tgqDJ/IY4kQU5bnQH+gMpVA1ReJ7myaWzJTKeczWn20wzBW0Zl557PYA5ypNTOw66qgDU6vFxiQoVlbT8/kNRjvhvNuP33i1nhZhSsEZdiIznDfQlPp0ekkmqyNkhwsshFtwsYfSQOW2cpopcpvNGIG38s5FzJGrV3EYFLw4J3C5NhfSSueVhkV+LXCTmJecyxd7S/fsRimPSCR8O0z0aykN/Ts4Qmkrd2mAt8yOtLJ6pFlhTorWsAK7TXCG8xqGseE9LQdUeAk3UTrv3YPak/bdxnxH23pQy9PcNSW2bRKNpg2mKbYuQmpNyjwVaxKs2Jd3rwJwaQ0XT1wVPpi7AtLizDyrtCUpbrR/gFMUITxi0inZG54aNgS668y4ww9R98Rc1WzrwT2z6vzcev2KedzX0KkWJCp3Kdm9+jU=</elem>
+<elem key="fingerprint">0e77d9cbf80541b9e44571c101acda93</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">3072</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDdiFCHPlrpsgHUZ7TPuOfAk26vdS+LYia6jy6/b+3VF/PiWWxkpvaTyDIKOurj1sLje6IZLi+RCtpIzv5mI4uc=</elem>
+<elem key="fingerprint">4051934bf83785fda5f4d727416ca0a5</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIBJsiS3lTHIiHHiGGKretXMXZaFGQEkCOJMEYF2CgP0E</elem>
+<elem key="fingerprint">098560c535c14d837693fbc7f0cd7b8e</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.48" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.48</cpe></service><script id="http-favicon" output="Unknown favicon MD5: B0BD48E57FD398C5DA8AE8F2CCC8D90D"/><script id="http-title" output="qdPM | Login"><elem key="title">qdPM | Login</elem>
+</script><script id="http-server-header" output="Apache/2.4.48 (Debian)"><elem>Apache/2.4.48 (Debian)</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" version="8.0.26" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:8.0.26</cpe></service><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 8.0.26&#xa;  Thread ID: 172&#xa;  Capabilities flags: 65535&#xa;  Some Capabilities: SwitchToSSLAfterHandshake, Speaks41ProtocolNew, Speaks41ProtocolOld, LongPassword, SupportsLoadDataLocal, LongColumnFlag, FoundRows, Support41Auth, IgnoreSigpipes, ODBCClient, InteractiveClient, DontAllowDatabaseTableColumn, ConnectWithDatabase, SupportsTransactions, IgnoreSpaceBeforeParenthesis, SupportsCompression, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults&#xa;  Status: Autocommit&#xa;  Salt: )vBP)\x0E=n@wK\x01\x14}K+\x1A)&amp;f&#xa;  Auth Plugin Name: caching_sha2_password"><elem key="Protocol">10</elem>
+<elem key="Version">8.0.26</elem>
+<elem key="Thread ID">172</elem>
+<elem key="Capabilities flags">65535</elem>
+<table key="Some Capabilities">
+<elem>SwitchToSSLAfterHandshake</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>LongPassword</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>LongColumnFlag</elem>
+<elem>FoundRows</elem>
+<elem>Support41Auth</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>ODBCClient</elem>
+<elem>InteractiveClient</elem>
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>SupportsTransactions</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>SupportsCompression</elem>
+<elem>SupportsMultipleStatments</elem>
+<elem>SupportsAuthPlugins</elem>
+<elem>SupportsMultipleResults</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">)vBP)\x0E=n@wK\x01\x14}K+\x1A)&amp;f</elem>
+<elem key="Auth Plugin Name">caching_sha2_password</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=MySQL_Server_8.0.26_Auto_Generated_Server_Certificate&#xa;Issuer: commonName=MySQL_Server_8.0.26_Auto_Generated_CA_Certificate&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-09-25T10:47:29&#xa;Not valid after:  2031-09-23T10:47:29&#xa;MD5:   5b43:7361:8d5b:1938:656d:44a3:4e07:bbcc&#xa;SHA-1: 5d26:f9ad:743c:f316:6aa5:32ae:fdf8:2571:bb44:91c3"><table key="subject">
+<elem key="commonName">MySQL_Server_8.0.26_Auto_Generated_Server_Certificate</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">MySQL_Server_8.0.26_Auto_Generated_CA_Certificate</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">DF595119507E07CB4AE6896229CAEDC50F341E6680BDBADDDB42B5B44736BBBCB2D4076C58681DBC2E23EEFD5D2207A93B08F6E348358B3BFD9C1BDFD0B5DA87AE553C9531A257A4B6CB7FB9870CB608A35720A77DA28BEA33362443FD4A5EC61BD2D219E522C9C069A75EEDA8306B7774E32DA618D4039D57A193DE359A022D4861D40A0AAC13390C44A0E2883C5947337537E4DFBB6D9A47E4B86EF189AB2E143182E0853C3D752E66ADE5EDFF36D40C6085BB0EB635FDDFB03156D5ACD821C31CBF0CF06A53B89F034410E2B4F840FB0F460665DDC1B57DCFC31F39FBBD2904A646A050FD015763589EA4A8B873FE1A02467A669BAA9803BABDED11D036E7</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-09-25T10:47:29</elem>
+<elem key="notAfter">2031-09-23T10:47:29</elem>
+</table>
+<elem key="md5">5b4373618d5b1938656d44a34e07bbcc</elem>
+<elem key="sha1">5d26f9ad743cf3166aa532aefdf82571bb4491c3</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDBzCCAe+gAwIBAgIBAjANBgkqhkiG9w0BAQsFADA8MTowOAYDVQQDDDFNeVNR&#xa;TF9TZXJ2ZXJfOC4wLjI2X0F1dG9fR2VuZXJhdGVkX0NBX0NlcnRpZmljYXRlMB4X&#xa;DTIxMDkyNTEwNDcyOVoXDTMxMDkyMzEwNDcyOVowQDE+MDwGA1UEAww1TXlTUUxf&#xa;U2VydmVyXzguMC4yNl9BdXRvX0dlbmVyYXRlZF9TZXJ2ZXJfQ2VydGlmaWNhdGUw&#xa;ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDfWVEZUH4Hy0rmiWIpyu3F&#xa;DzQeZoC9ut3bQrW0Rza7vLLUB2xYaB28LiPu/V0iB6k7CPbjSDWLO/2cG9/QtdqH&#xa;rlU8lTGiV6S2y3+5hwy2CKNXIKd9oovqMzYkQ/1KXsYb0tIZ5SLJwGmnXu2oMGt3&#xa;dOMtphjUA51XoZPeNZoCLUhh1AoKrBM5DESg4og8WUczdTfk37ttmkfkuG7xiasu&#xa;FDGC4IU8PXUuZq3l7f821AxghbsOtjX937AxVtWs2CHDHL8M8GpTuJ8DRBDitPhA&#xa;+w9GBmXdwbV9z8MfOfu9KQSmRqBQ/QFXY1iepKi4c/4aAkZ6ZpuqmAO6ve0R0Dbn&#xa;AgMBAAGjEDAOMAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBADsBSpmN&#xa;RGDthb5gpyatp6VzBp7fK6r+n9oxBTyNMYv2cic2wyt/l34poAZ8Sh1q38hb8UC8&#xa;44cdYZJ3hvqygIx1GT9OeVj3ZLsKMjUePq9ZYjChOpP5VHaymS3oA5d/B790k5xJ&#xa;U3U8JlUmHwct4CMlWTKeKniFkHBwyimSn5W1O0XamWXsWG0qCTRK+0OTu3Er51V4&#xa;nDM9lqNlTQU0MIrDvLK2kbwR1FLewc1SLvOSbjY45NNACmnUtxD0OBoYnJWHLJPP&#xa;PKPYucw6ZEttW+bYddpgTHZAHK9JICN64uAfZZ3OXk4n666A6DBJPD/RJUOtrSOA&#xa;hYSGLjhxppsFzSc=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="33060"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysqlx" servicefp="SF-Port33060-TCP:V=7.94SVN%I=7%D=9/4%Time=66D7EAA7%P=x86_64-pc-linux-gnu%r(NULL,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(GenericLines,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(GetRequest,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(HTTPOptions,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(RTSPRequest,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(RPCCheck,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(DNSVersionBindReqTCP,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(DNSStatusRequestTCP,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(Help,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(SSLSessionReq,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(TerminalServerCookie,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(TLSSessionReq,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(Kerberos,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(SMBProgNeg,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(X11Probe,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(FourOhFourRequest,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(LPDString,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(LDAPSearchReq,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(LDAPBindReq,46,&quot;\x05\0\0\0\x0b\x08\x05\x1a\x009\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\*Parse\x20error\x20unserializing\x20protobuf\x20message\&quot;\x05HY000&quot;)%r(SIPOptions,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(LANDesk-RC,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(TerminalServer,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(NCP,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(NotesRPC,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(JavaRMI,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(WMSRequest,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(oracle-tns,32,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0%\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x16Invalid\x20message-frame\.\&quot;\x05HY000&quot;)%r(ms-sql-s,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(afp,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, LDAPSearchReq, NotesRPC, SSLSessionReq, TLSSessionReq, X11Probe, afp: &#xa;    Invalid message&quot;&#xa;    HY000&#xa;  LDAPBindReq: &#xa;    *Parse error unserializing protobuf message&quot;&#xa;    HY000&#xa;  oracle-tns: &#xa;    Invalid message-frame.&quot;&#xa;    HY000"><elem key="DNSStatusRequestTCP, LDAPSearchReq, NotesRPC, SSLSessionReq, TLSSessionReq, X11Probe, afp">&#xa;    Invalid message&quot;&#xa;    HY000</elem>
+<elem key="LDAPBindReq">&#xa;    *Parse error unserializing protobuf message&quot;&#xa;    HY000</elem>
+<elem key="oracle-tns">&#xa;    Invalid message-frame.&quot;&#xa;    HY000</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="44632"/>
+<osmatch name="Linux 4.15 - 5.8" accuracy="100" line="67250">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="2544999" lastboot="Mon Aug  5 21:09:14 2024"/>
+<distance value="1"/>
+<tcpsequence index="261" difficulty="Good luck!" values="C1C317EE,1AF80B42,18512908,D3C831AA,EF5255F,7A912BEF"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="97B18E75,97B18ED9,97B18F3E,97B18FA3,97B19012,97B19070"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.123.124" rtt="1.57"/>
+</trace>
+<times srtt="1572" rttvar="651" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1725426353"/>
+<taskend task="NSE" time="1725426353"/>
+<taskbegin task="NSE" time="1725426353"/>
+<taskend task="NSE" time="1725426353"/>
+<taskbegin task="NSE" time="1725426353"/>
+<taskend task="NSE" time="1725426353"/>
+<runstats><finished time="1725426353" timestr="Wed Sep  4 08:05:53 2024" summary="Nmap done at Wed Sep  4 08:05:53 2024; 1 IP address (1 host up) scanned in 30.95 seconds" elapsed="30.95" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
