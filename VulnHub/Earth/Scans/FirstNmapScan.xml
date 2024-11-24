@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Jul 29 13:20:52 2024 as: nmap -sV -vvv -p- -O -oA FirstNmapScan 10.0.2.13 -->
+<nmaprun scanner="nmap" args="nmap -sV -vvv -p- -O -oA FirstNmapScan 10.0.2.13" start="1722248452" startstr="Mon Jul 29 13:20:52 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1722248452"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.2.13" addrtype="ipv4"/>
+<address addr="08:00:27:23:63:BC" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="ARP Ping Scan" time="1722248452" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1722248452"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1722248452"/>
+<taskbegin task="SYN Stealth Scan" time="1722248452"/>
+<taskprogress task="SYN Stealth Scan" time="1722248483" percent="14.72" remaining="180" etc="1722248663"/>
+<taskprogress task="SYN Stealth Scan" time="1722248513" percent="33.13" remaining="124" etc="1722248636"/>
+<taskprogress task="SYN Stealth Scan" time="1722248543" percent="52.86" remaining="82" etc="1722248624"/>
+<taskprogress task="SYN Stealth Scan" time="1722248573" percent="73.94" remaining="43" etc="1722248616"/>
+<taskend task="SYN Stealth Scan" time="1722248608" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1722248608"/>
+<taskend task="Service scan" time="1722248620" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1722248624"/>
+<taskend task="NSE" time="1722248624"/>
+<taskbegin task="NSE" time="1722248624"/>
+<taskend task="NSE" time="1722248624"/>
+<host starttime="1722248452" endtime="1722248624"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.2.13" addrtype="ipv4"/>
+<address addr="08:00:27:23:63:BC" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+<hostname name="10.0.2.13" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-response" count="65372" proto="tcp" ports="1-21,23-52,54-79,81-82,84-110,112-198,200-430,432-442,444-449,451-553,555-994,996-1114,1116-1441,1443-1462,1464-2106,2108-2260,2262-2675,2677-2814,2816-2861,2863-2909,2911-3227,3229-3388,3390-3572,3574-4070,4072-4403,4405-5004,5006-6221,6223-6457,6459-6804,6806-7183,7185-7386,7388-8079,8081-8691,8693-8817,8819-9396,9398-9421,9423-9701,9703-10440,10442-10709,10711-11361,11363-11504,11506-11969,11971-12013,12015-12101,12103-12210,12212-12501,12503-12522,12524-12659,12661-13697,13699-13881,13883-13916,13918-14683,14685-15383,15385-15514,15516-16002,16004-16335,16337-16391,16393-17171,17173-18379,18381-18538,18540-19262,19264-19379,19381-19805,19807-21429,21431-22214,22216-22897,22899-24042,24044-24773,24775-25193,25195-25314,25316-25536,25538-25660,25662-27502,27504-28836,28838-29197,29199-29567,29569-30091,30093-31021,31023-31154,31156-31403,31405-31475,31477-32308,32310-32802,32804-32953,32955-33396,33398-33837,33839-34336,34338-34735,34737-34870,34872-35018,35020-35102,35104-36133,36135-36607,36609-36759,36761-36814,36816-37053,37055-37390,37392-38484,38486-38550,38552-38558,38560-39945,39947-40183,40185-40709,40711-41318,41320-42073,42075-43285,43287-43421,43423-43631,43633-44139,44141-44593,44595-44921,44923-44943,44945-45042,45044-45307,45309-46293,46295-46323,46325-46952,46954-47018,47020-47094,47096-47189,47191-48804,48806-48894,48896-49340,49342-50045,50047-50092,50094-50908,50910-51315,51317-51556,51558-51584,51586-52537,52539-52874,52876-53263,53265-53284,53286-53313,53315-54074,54076-54239,54241-54345,54347-54672,54674-54823,54825-54955,54957-55335,55337-56276,56278-56518,56520-57052,57054-57182,57184-57269,57271-57894,57896-58180,58182-58225,58227-59010,59012-59053,59055-59064,59066-59363,59365-59961,59963-60134,60136-61023,61025-61095,61097-61414,61416-61479,61481-63251,63253-63401,63403-64777,64779-64796,64798-65535"/>
+<extrareasons reason="admin-prohibited" count="160" proto="tcp" ports="53,83,111,199,431,450,554,995,1115,1442,1463,2107,2261,2676,2815,2862,2910,3228,3389,3573,4071,4404,5005,6222,6458,6805,7184,7387,8080,8692,8818,9397,9422,9702,10441,10710,11362,11505,11970,12014,12102,12211,12502,12523,12660,13698,13882,13917,14684,15384,15515,16003,16336,16392,17172,18380,18539,19263,19380,19806,21430,22215,22898,24043,24774,25194,25315,25537,25661,27503,28837,29198,29568,30092,31022,31155,31404,31476,32309,32803,32954,33397,33838,34337,34736,34871,35019,35103,36134,36608,36760,36815,37054,37391,38485,38551,38559,39946,40184,40710,41319,42074,43286,43422,43632,44140,44594,44922,44944,45043,45308,46294,46324,46953,47019,47095,47190,48805,48895,49341,50046,50093,50909,51316,51557,51585,52538,52875,53264,53285,53314,54075,54240,54346,54673,54824,54956,55336,56277,56519,57053,57183,57270,57895,58181,58226,59011,59054,59065,59364,59962,60135,61024,61096,61415,61480,63252,63402,64778,64797"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="8.6" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.6</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.51" extrainfo="(Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.51</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.51" extrainfo="(Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.51</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Linux 4.15 - 5.8" accuracy="97" line="67250">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="97"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="97"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 5.4" accuracy="97" line="68121">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="97"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 5.5" accuracy="95" line="68098">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.4" accuracy="91" line="68194">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:5.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="91" line="55372">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 4.11" accuracy="91" line="63448">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="91" line="65323">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4 - 3.10" accuracy="91" line="65584">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="91" line="56580">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.13" accuracy="91" line="56610">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.94SVN%E=4%D=7/29%OT=22%CT=%CU=%PV=Y%DS=1%DC=D%G=N%M=080027%TM=66A76DB0%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=FE%GCD=1%ISR=10E%TI=Z%TS=A)&#xa;SEQ(SP=FF%GCD=1%ISR=10F%TI=Z%II=I%TS=A)&#xa;OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="2434484" lastboot="Mon Jul  1 09:09:00 2024"/>
+<distance value="1"/>
+<tcpsequence index="255" difficulty="Good luck!" values="34579A22,C6499D84,6DCFBBEC,23EDE490,E41E32FF,6F4C3E14"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="911B4176,911B41DB,911B4240,911B42A6,911B430A,911B436E"/>
+<times srtt="2021" rttvar="454" to="100000"/>
+</host>
+<runstats><finished time="1722248624" timestr="Mon Jul 29 13:23:44 2024" summary="Nmap done at Mon Jul 29 13:23:44 2024; 1 IP address (1 host up) scanned in 172.29 seconds" elapsed="172.29" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

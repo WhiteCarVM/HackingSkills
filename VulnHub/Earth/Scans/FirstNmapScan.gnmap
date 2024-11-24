@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Mon Jul 29 13:20:52 2024 as: nmap -sV -vvv -p- -O -oA FirstNmapScan 10.0.2.13
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.0.2.13 (10.0.2.13)	Status: Up
+Host: 10.0.2.13 (10.0.2.13)	Ports: 22/open/tcp//ssh//OpenSSH 8.6 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.51 ((Fedora) OpenSSL|1.1.1l mod_wsgi|4.7.1 Python|3.9)/, 443/open/tcp//ssl|http//Apache httpd 2.4.51 ((Fedora) OpenSSL|1.1.1l mod_wsgi|4.7.1 Python|3.9)/	Ignored State: filtered (65532)	Seq Index: 255	IP ID Seq: All zeros
+# Nmap done at Mon Jul 29 13:23:44 2024 -- 1 IP address (1 host up) scanned in 172.29 seconds

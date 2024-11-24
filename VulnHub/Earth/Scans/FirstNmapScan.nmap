@@ -1,0 +1,39 @@
+# Nmap 7.94SVN scan initiated Mon Jul 29 13:20:52 2024 as: nmap -sV -vvv -p- -O -oA FirstNmapScan 10.0.2.13
+Nmap scan report for 10.0.2.13 (10.0.2.13)
+Host is up, received arp-response (0.0020s latency).
+Scanned at 2024-07-29 13:20:52 +03 for 172s
+Not shown: 65372 filtered tcp ports (no-response), 160 filtered tcp ports (admin-prohibited)
+PORT    STATE SERVICE  REASON         VERSION
+22/tcp  open  ssh      syn-ack ttl 64 OpenSSH 8.6 (protocol 2.0)
+80/tcp  open  http     syn-ack ttl 64 Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9)
+443/tcp open  ssl/http syn-ack ttl 64 Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9)
+MAC Address: 08:00:27:23:63:BC (Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|storage-misc
+Running (JUST GUESSING): Linux 4.X|5.X|2.6.X|3.X (97%), Synology DiskStation Manager 5.X (90%)
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:3 cpe:/a:synology:diskstation_manager:5.2
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 4.15 - 5.8 (97%), Linux 5.0 - 5.4 (97%), Linux 5.0 - 5.5 (95%), Linux 5.4 (91%), Linux 2.6.32 (91%), Linux 3.10 - 4.11 (91%), Linux 3.2 - 4.9 (91%), Linux 3.4 - 3.10 (91%), Linux 2.6.32 - 3.10 (91%), Linux 2.6.32 - 3.13 (91%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.94SVN%E=4%D=7/29%OT=22%CT=%CU=%PV=Y%DS=1%DC=D%G=N%M=080027%TM=66A76DB0%P=x86_64-pc-linux-gnu)
+SEQ(SP=FE%GCD=1%ISR=10E%TI=Z%TS=A)
+SEQ(SP=FF%GCD=1%ISR=10F%TI=Z%II=I%TS=A)
+OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 28.177 days (since Mon Jul  1 09:09:00 2024)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul 29 13:23:44 2024 -- 1 IP address (1 host up) scanned in 172.29 seconds

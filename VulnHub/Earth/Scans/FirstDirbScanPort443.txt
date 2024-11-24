@@ -1,0 +1,43 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: FirstDirbScanPort443.txt
+START_TIME: Mon Jul 29 13:53:38 2024
+URL_BASE: https://10.0.2.13:443/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: https://10.0.2.13:443/ ----
++ https://10.0.2.13:443/cgi-bin/ (CODE:403|SIZE:199)
+
+-----------------
+END_TIME: Mon Jul 29 13:53:56 2024
+DOWNLOADED: 4612 - FOUND: 1
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: FirstDirbScanPort443.txt
+START_TIME: Mon Jul 29 13:54:59 2024
+URL_BASE: https://10.0.2.13:443/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: https://10.0.2.13:443/ ----
++ https://10.0.2.13:443/cgi-bin/ (CODE:403|SIZE:199)
+
+-----------------
+END_TIME: Mon Jul 29 13:55:07 2024
+DOWNLOADED: 4612 - FOUND: 1

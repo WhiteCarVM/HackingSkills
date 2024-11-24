@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>FFUF Report - </title>
+
+    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+	/>
+	<link 
+	  rel="stylesheet" 
+	  type="text/css" 
+	  href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"
+	/>
+  
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">FFUF</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        </ul>
+      </div>
+    </nav>
+
+    <main class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br /><br />
+        <h1 class="header center ">FFUF Report</h1>
+        <div class="row center">
+
+		<pre>ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u https://terratest.earth.local/FUZZ -fc 403 -t 200 -o FirstFfufScanSubdomainDir.html -of html</pre>
+		<pre>2024-07-29T15:04:40&#43;03:00</pre>
+
+   <table id="ffufreport">
+        <thead>
+        <div style="display:none">
+|result_raw|StatusCode|FUZZ|Url|RedirectLocation|Position|ContentLength|ContentWords|ContentLines|ContentType|Duration|Resultfile|ScraperData|FfufHash|
+        </div>
+          <tr>
+              <th>Status</th>
+              <th>FUZZ</th>
+			  <th>URL</th>
+			  <th>Redirect location</th>
+              <th>Position</th>
+              <th>Length</th>
+              <th>Words</th>
+			  <th>Lines</th>
+			  <th>Type</th>
+              <th>Duration</th>
+			  <th>Resultfile</th>
+              <th>Scraper data</th>
+              <th>Ffuf Hash</th>
+          </tr>
+        </thead>
+
+        <tbody>
+			
+                <div style="display:none">
+|result_raw|200|#|https://terratest.earth.local/#||10|26|4|2|text/html; charset=UTF-8|1.872958892s|||382bba|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>#</td>
+                    
+                    <td><a href="https://terratest.earth.local/#">https://terratest.earth.local/#</a></td>
+                    <td><a href=""></a></td>
+                    <td>10</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>1.872958892s</td>
+                    <td></td>
+					<td></td>
+					<td>382bba</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# license, visit http://creativecommons.org/licenses/by-sa/3.0/|https://terratest.earth.local/# license, visit http://creativecommons.org/licenses/by-sa/3.0/||7|26|4|2|text/html; charset=UTF-8|10.772739ms|||382bb7|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># license, visit http://creativecommons.org/licenses/by-sa/3.0/</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20license,%20visit%20http://creativecommons.org/licenses/by-sa/3.0/">https://terratest.earth.local/# license, visit http://creativecommons.org/licenses/by-sa/3.0/</a></td>
+                    <td><a href=""></a></td>
+                    <td>7</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>10.772739ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bb7</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# Suite 300, San Francisco, California, 94105, USA.|https://terratest.earth.local/# Suite 300, San Francisco, California, 94105, USA.||9|26|4|2|text/html; charset=UTF-8|28.576305ms|||382bb9|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># Suite 300, San Francisco, California, 94105, USA.</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20Suite%20300,%20San%20Francisco,%20California,%2094105,%20USA.">https://terratest.earth.local/# Suite 300, San Francisco, California, 94105, USA.</a></td>
+                    <td><a href=""></a></td>
+                    <td>9</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>28.576305ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bb9</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# on at least 2 different hosts|https://terratest.earth.local/# on at least 2 different hosts||12|26|4|2|text/html; charset=UTF-8|25.701728ms|||382bbc|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># on at least 2 different hosts</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20on%20at%20least%202%20different%20hosts">https://terratest.earth.local/# on at least 2 different hosts</a></td>
+                    <td><a href=""></a></td>
+                    <td>12</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>25.701728ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bbc</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# Copyright 2007 James Fisher|https://terratest.earth.local/# Copyright 2007 James Fisher||3|26|4|2|text/html; charset=UTF-8|325.839892ms|||382bb3|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># Copyright 2007 James Fisher</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20Copyright%202007%20James%20Fisher">https://terratest.earth.local/# Copyright 2007 James Fisher</a></td>
+                    <td><a href=""></a></td>
+                    <td>3</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>325.839892ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bb3</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# Priority ordered case-sensitive list, where entries were found|https://terratest.earth.local/# Priority ordered case-sensitive list, where entries were found||11|26|4|2|text/html; charset=UTF-8|665.533628ms|||382bbb|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># Priority ordered case-sensitive list, where entries were found</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20Priority%20ordered%20case-sensitive%20list,%20where%20entries%20were%20found">https://terratest.earth.local/# Priority ordered case-sensitive list, where entries were found</a></td>
+                    <td><a href=""></a></td>
+                    <td>11</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>665.533628ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bbb</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# directory-list-2.3-medium.txt|https://terratest.earth.local/# directory-list-2.3-medium.txt||1|26|4|2|text/html; charset=UTF-8|955.429592ms|||382bb1|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># directory-list-2.3-medium.txt</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20directory-list-2.3-medium.txt">https://terratest.earth.local/# directory-list-2.3-medium.txt</a></td>
+                    <td><a href=""></a></td>
+                    <td>1</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>955.429592ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bb1</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|#|https://terratest.earth.local/#||2|26|4|2|text/html; charset=UTF-8|944.480341ms|||382bb2|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>#</td>
+                    
+                    <td><a href="https://terratest.earth.local/#">https://terratest.earth.local/#</a></td>
+                    <td><a href=""></a></td>
+                    <td>2</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>944.480341ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bb2</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|#|https://terratest.earth.local/#||13|26|4|2|text/html; charset=UTF-8|2.687667993s|||382bbd|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>#</td>
+                    
+                    <td><a href="https://terratest.earth.local/#">https://terratest.earth.local/#</a></td>
+                    <td><a href=""></a></td>
+                    <td>13</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>2.687667993s</td>
+                    <td></td>
+					<td></td>
+					<td>382bbd</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# Attribution-Share Alike 3.0 License. To view a copy of this|https://terratest.earth.local/# Attribution-Share Alike 3.0 License. To view a copy of this||6|26|4|2|text/html; charset=UTF-8|2.261675593s|||382bb6|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># Attribution-Share Alike 3.0 License. To view a copy of this</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20Attribution-Share%20Alike%203.0%20License.%20To%20view%20a%20copy%20of%20this">https://terratest.earth.local/# Attribution-Share Alike 3.0 License. To view a copy of this</a></td>
+                    <td><a href=""></a></td>
+                    <td>6</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>2.261675593s</td>
+                    <td></td>
+					<td></td>
+					<td>382bb6</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# or send a letter to Creative Commons, 171 Second Street,|https://terratest.earth.local/# or send a letter to Creative Commons, 171 Second Street,||8|26|4|2|text/html; charset=UTF-8|2.414157778s|||382bb8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># or send a letter to Creative Commons, 171 Second Street,</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20or%20send%20a%20letter%20to%20Creative%20Commons,%20171%20Second%20Street,">https://terratest.earth.local/# or send a letter to Creative Commons, 171 Second Street,</a></td>
+                    <td><a href=""></a></td>
+                    <td>8</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>2.414157778s</td>
+                    <td></td>
+					<td></td>
+					<td>382bb8</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200||https://terratest.earth.local/||14|26|4|2|text/html; charset=UTF-8|2.262570862s|||382bbe|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td></td>
+                    
+                    <td><a href="https://terratest.earth.local/">https://terratest.earth.local/</a></td>
+                    <td><a href=""></a></td>
+                    <td>14</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>2.262570862s</td>
+                    <td></td>
+					<td></td>
+					<td>382bbe</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|#|https://terratest.earth.local/#||4|26|4|2|text/html; charset=UTF-8|92.44342ms|||382bb4|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>#</td>
+                    
+                    <td><a href="https://terratest.earth.local/#">https://terratest.earth.local/#</a></td>
+                    <td><a href=""></a></td>
+                    <td>4</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>92.44342ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bb4</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|# This work is licensed under the Creative Commons|https://terratest.earth.local/# This work is licensed under the Creative Commons||5|26|4|2|text/html; charset=UTF-8|3.185096359s|||382bb5|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td># This work is licensed under the Creative Commons</td>
+                    
+                    <td><a href="https://terratest.earth.local/#%20This%20work%20is%20licensed%20under%20the%20Creative%20Commons">https://terratest.earth.local/# This work is licensed under the Creative Commons</a></td>
+                    <td><a href=""></a></td>
+                    <td>5</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>3.185096359s</td>
+                    <td></td>
+					<td></td>
+					<td>382bb5</td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200||https://terratest.earth.local/||45240|26|4|2|text/html; charset=UTF-8|214.574389ms|||382bbb0b8|
+                </div>
+                <tr class="result-200" style="background-color: #adea9e;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td></td>
+                    
+                    <td><a href="https://terratest.earth.local/">https://terratest.earth.local/</a></td>
+                    <td><a href=""></a></td>
+                    <td>45240</td>
+                    <td>26</td>
+                    <td>4</td>
+					<td>2</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>214.574389ms</td>
+                    <td></td>
+					<td></td>
+					<td>382bbb0b8</td>
+                </tr>
+            
+        </tbody>
+      </table>
+
+        </div>
+        <br /><br />
+      </div>
+    </main>
+
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#ffufreport').DataTable(
+            {
+                "aLengthMenu": [
+                    [250, 500, 1000, 2500, -1],
+                    [250, 500, 1000, 2500, "All"]
+                ]
+            }
+        )
+        $('select').formSelect();
+        });
+    </script>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </body>
+</html>
+
+	
