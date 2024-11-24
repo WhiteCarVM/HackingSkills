@@ -1,0 +1,369 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: FirstDirbScan.txt
+START_TIME: Fri Jul 26 12:45:12 2024
+URL_BASE: http://10.0.2.10:80/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://10.0.2.10:80/ ----
+==> DIRECTORY: http://10.0.2.10:80/image/
++ http://10.0.2.10:80/index.html (CODE:200|SIZE:333)
+==> DIRECTORY: http://10.0.2.10:80/javascript/
+==> DIRECTORY: http://10.0.2.10:80/manual/
++ http://10.0.2.10:80/robots.txt (CODE:200|SIZE:34)
++ http://10.0.2.10:80/server-status (CODE:403|SIZE:274)
+
+---- Entering directory: http://10.0.2.10:80/image/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://10.0.2.10:80/javascript/ ----
+==> DIRECTORY: http://10.0.2.10:80/javascript/jquery/
+
+---- Entering directory: http://10.0.2.10:80/manual/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/da/
+==> DIRECTORY: http://10.0.2.10:80/manual/de/
+==> DIRECTORY: http://10.0.2.10:80/manual/en/
+==> DIRECTORY: http://10.0.2.10:80/manual/es/
+==> DIRECTORY: http://10.0.2.10:80/manual/fr/
+==> DIRECTORY: http://10.0.2.10:80/manual/images/
++ http://10.0.2.10:80/manual/index.html (CODE:200|SIZE:676)
+==> DIRECTORY: http://10.0.2.10:80/manual/ja/
+==> DIRECTORY: http://10.0.2.10:80/manual/ko/
+==> DIRECTORY: http://10.0.2.10:80/manual/ru/
+==> DIRECTORY: http://10.0.2.10:80/manual/style/
+==> DIRECTORY: http://10.0.2.10:80/manual/tr/
+==> DIRECTORY: http://10.0.2.10:80/manual/zh-cn/
+
+---- Entering directory: http://10.0.2.10:80/javascript/jquery/ ----
++ http://10.0.2.10:80/javascript/jquery/jquery (CODE:200|SIZE:287600)
+
+---- Entering directory: http://10.0.2.10:80/manual/da/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/da/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/da/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/da/howto/
++ http://10.0.2.10:80/manual/da/index.html (CODE:200|SIZE:9416)
+==> DIRECTORY: http://10.0.2.10:80/manual/da/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/da/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/da/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/da/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/de/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/de/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/de/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/de/howto/
++ http://10.0.2.10:80/manual/de/index.html (CODE:200|SIZE:9843)
+==> DIRECTORY: http://10.0.2.10:80/manual/de/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/de/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/de/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/de/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/en/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/en/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/en/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/en/howto/
++ http://10.0.2.10:80/manual/en/index.html (CODE:200|SIZE:9666)
+==> DIRECTORY: http://10.0.2.10:80/manual/en/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/en/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/en/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/en/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/es/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/es/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/es/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/es/howto/
++ http://10.0.2.10:80/manual/es/index.html (CODE:200|SIZE:10325)
+==> DIRECTORY: http://10.0.2.10:80/manual/es/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/es/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/es/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/es/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/fr/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/fr/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/fr/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/fr/howto/
++ http://10.0.2.10:80/manual/fr/index.html (CODE:200|SIZE:10033)
+==> DIRECTORY: http://10.0.2.10:80/manual/fr/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/fr/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/fr/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/fr/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://10.0.2.10:80/manual/ja/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/ja/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/ja/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/ja/howto/
++ http://10.0.2.10:80/manual/ja/index.html (CODE:200|SIZE:10124)
+==> DIRECTORY: http://10.0.2.10:80/manual/ja/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/ja/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/ja/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/ja/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/ko/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/ko/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/ko/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/ko/howto/
++ http://10.0.2.10:80/manual/ko/index.html (CODE:200|SIZE:8774)
+==> DIRECTORY: http://10.0.2.10:80/manual/ko/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/ko/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/ko/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/ko/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/ru/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/ru/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/ru/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/ru/howto/
++ http://10.0.2.10:80/manual/ru/index.html (CODE:200|SIZE:10996)
+==> DIRECTORY: http://10.0.2.10:80/manual/ru/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/ru/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/ru/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/ru/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/style/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://10.0.2.10:80/manual/tr/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/tr/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/tr/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/tr/howto/
++ http://10.0.2.10:80/manual/tr/index.html (CODE:200|SIZE:9903)
+==> DIRECTORY: http://10.0.2.10:80/manual/tr/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/tr/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/tr/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/tr/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/zh-cn/ ----
+==> DIRECTORY: http://10.0.2.10:80/manual/zh-cn/developer/
+==> DIRECTORY: http://10.0.2.10:80/manual/zh-cn/faq/
+==> DIRECTORY: http://10.0.2.10:80/manual/zh-cn/howto/
++ http://10.0.2.10:80/manual/zh-cn/index.html (CODE:200|SIZE:9400)
+==> DIRECTORY: http://10.0.2.10:80/manual/zh-cn/misc/
+==> DIRECTORY: http://10.0.2.10:80/manual/zh-cn/mod/
+==> DIRECTORY: http://10.0.2.10:80/manual/zh-cn/programs/
+==> DIRECTORY: http://10.0.2.10:80/manual/zh-cn/ssl/
+
+---- Entering directory: http://10.0.2.10:80/manual/da/developer/ ----
++ http://10.0.2.10:80/manual/da/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/da/faq/ ----
++ http://10.0.2.10:80/manual/da/faq/index.html (CODE:200|SIZE:3878)
+
+---- Entering directory: http://10.0.2.10:80/manual/da/howto/ ----
++ http://10.0.2.10:80/manual/da/howto/index.html (CODE:200|SIZE:8859)
+
+---- Entering directory: http://10.0.2.10:80/manual/da/misc/ ----
++ http://10.0.2.10:80/manual/da/misc/index.html (CODE:200|SIZE:5384)
+
+---- Entering directory: http://10.0.2.10:80/manual/da/mod/ ----
++ http://10.0.2.10:80/manual/da/mod/index.html (CODE:200|SIZE:23574)
+
+---- Entering directory: http://10.0.2.10:80/manual/da/programs/ ----
++ http://10.0.2.10:80/manual/da/programs/index.html (CODE:200|SIZE:6971)
+
+---- Entering directory: http://10.0.2.10:80/manual/da/ssl/ ----
++ http://10.0.2.10:80/manual/da/ssl/index.html (CODE:200|SIZE:5273)
+
+---- Entering directory: http://10.0.2.10:80/manual/de/developer/ ----
++ http://10.0.2.10:80/manual/de/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/de/faq/ ----
++ http://10.0.2.10:80/manual/de/faq/index.html (CODE:200|SIZE:3878)
+
+---- Entering directory: http://10.0.2.10:80/manual/de/howto/ ----
++ http://10.0.2.10:80/manual/de/howto/index.html (CODE:200|SIZE:8859)
+
+---- Entering directory: http://10.0.2.10:80/manual/de/misc/ ----
++ http://10.0.2.10:80/manual/de/misc/index.html (CODE:200|SIZE:5384)
+
+---- Entering directory: http://10.0.2.10:80/manual/de/mod/ ----
++ http://10.0.2.10:80/manual/de/mod/index.html (CODE:200|SIZE:23863)
+
+---- Entering directory: http://10.0.2.10:80/manual/de/programs/ ----
++ http://10.0.2.10:80/manual/de/programs/index.html (CODE:200|SIZE:6971)
+
+---- Entering directory: http://10.0.2.10:80/manual/de/ssl/ ----
++ http://10.0.2.10:80/manual/de/ssl/index.html (CODE:200|SIZE:5273)
+
+---- Entering directory: http://10.0.2.10:80/manual/en/developer/ ----
++ http://10.0.2.10:80/manual/en/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/en/faq/ ----
++ http://10.0.2.10:80/manual/en/faq/index.html (CODE:200|SIZE:3878)
+
+---- Entering directory: http://10.0.2.10:80/manual/en/howto/ ----
++ http://10.0.2.10:80/manual/en/howto/index.html (CODE:200|SIZE:8859)
+
+---- Entering directory: http://10.0.2.10:80/manual/en/misc/ ----
++ http://10.0.2.10:80/manual/en/misc/index.html (CODE:200|SIZE:5384)
+
+---- Entering directory: http://10.0.2.10:80/manual/en/mod/ ----
++ http://10.0.2.10:80/manual/en/mod/index.html (CODE:200|SIZE:23574)
+
+---- Entering directory: http://10.0.2.10:80/manual/en/programs/ ----
++ http://10.0.2.10:80/manual/en/programs/index.html (CODE:200|SIZE:6971)
+
+---- Entering directory: http://10.0.2.10:80/manual/en/ssl/ ----
++ http://10.0.2.10:80/manual/en/ssl/index.html (CODE:200|SIZE:5273)
+
+---- Entering directory: http://10.0.2.10:80/manual/es/developer/ ----
++ http://10.0.2.10:80/manual/es/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/es/faq/ ----
++ http://10.0.2.10:80/manual/es/faq/index.html (CODE:200|SIZE:4059)
+
+---- Entering directory: http://10.0.2.10:80/manual/es/howto/ ----
++ http://10.0.2.10:80/manual/es/howto/index.html (CODE:200|SIZE:8559)
+
+---- Entering directory: http://10.0.2.10:80/manual/es/misc/ ----
++ http://10.0.2.10:80/manual/es/misc/index.html (CODE:200|SIZE:6069)
+
+---- Entering directory: http://10.0.2.10:80/manual/es/mod/ ----
++ http://10.0.2.10:80/manual/es/mod/index.html (CODE:200|SIZE:24155)
+
+---- Entering directory: http://10.0.2.10:80/manual/es/programs/ ----
++ http://10.0.2.10:80/manual/es/programs/index.html (CODE:200|SIZE:7614)
+
+---- Entering directory: http://10.0.2.10:80/manual/es/ssl/ ----
++ http://10.0.2.10:80/manual/es/ssl/index.html (CODE:200|SIZE:5273)
+
+---- Entering directory: http://10.0.2.10:80/manual/fr/developer/ ----
++ http://10.0.2.10:80/manual/fr/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/fr/faq/ ----
++ http://10.0.2.10:80/manual/fr/faq/index.html (CODE:200|SIZE:3885)
+
+---- Entering directory: http://10.0.2.10:80/manual/fr/howto/ ----
++ http://10.0.2.10:80/manual/fr/howto/index.html (CODE:200|SIZE:9328)
+
+---- Entering directory: http://10.0.2.10:80/manual/fr/misc/ ----
++ http://10.0.2.10:80/manual/fr/misc/index.html (CODE:200|SIZE:5717)
+
+---- Entering directory: http://10.0.2.10:80/manual/fr/mod/ ----
++ http://10.0.2.10:80/manual/fr/mod/index.html (CODE:200|SIZE:25841)
+
+---- Entering directory: http://10.0.2.10:80/manual/fr/programs/ ----
++ http://10.0.2.10:80/manual/fr/programs/index.html (CODE:200|SIZE:7282)
+
+---- Entering directory: http://10.0.2.10:80/manual/fr/ssl/ ----
++ http://10.0.2.10:80/manual/fr/ssl/index.html (CODE:200|SIZE:5427)
+
+---- Entering directory: http://10.0.2.10:80/manual/ja/developer/ ----
++ http://10.0.2.10:80/manual/ja/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/ja/faq/ ----
++ http://10.0.2.10:80/manual/ja/faq/index.html (CODE:200|SIZE:3878)
+
+---- Entering directory: http://10.0.2.10:80/manual/ja/howto/ ----
++ http://10.0.2.10:80/manual/ja/howto/index.html (CODE:200|SIZE:8217)
+
+---- Entering directory: http://10.0.2.10:80/manual/ja/misc/ ----
++ http://10.0.2.10:80/manual/ja/misc/index.html (CODE:200|SIZE:5384)
+
+---- Entering directory: http://10.0.2.10:80/manual/ja/mod/ ----
++ http://10.0.2.10:80/manual/ja/mod/index.html (CODE:200|SIZE:24878)
+
+---- Entering directory: http://10.0.2.10:80/manual/ja/programs/ ----
++ http://10.0.2.10:80/manual/ja/programs/index.html (CODE:200|SIZE:6971)
+
+---- Entering directory: http://10.0.2.10:80/manual/ja/ssl/ ----
++ http://10.0.2.10:80/manual/ja/ssl/index.html (CODE:200|SIZE:5497)
+
+---- Entering directory: http://10.0.2.10:80/manual/ko/developer/ ----
++ http://10.0.2.10:80/manual/ko/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/ko/faq/ ----
++ http://10.0.2.10:80/manual/ko/faq/index.html (CODE:200|SIZE:3878)
+
+---- Entering directory: http://10.0.2.10:80/manual/ko/howto/ ----
++ http://10.0.2.10:80/manual/ko/howto/index.html (CODE:200|SIZE:6661)
+
+---- Entering directory: http://10.0.2.10:80/manual/ko/misc/ ----
++ http://10.0.2.10:80/manual/ko/misc/index.html (CODE:200|SIZE:5483)
+
+---- Entering directory: http://10.0.2.10:80/manual/ko/mod/ ----
++ http://10.0.2.10:80/manual/ko/mod/index.html (CODE:200|SIZE:23008)
+
+---- Entering directory: http://10.0.2.10:80/manual/ko/programs/ ----
++ http://10.0.2.10:80/manual/ko/programs/index.html (CODE:200|SIZE:5845)
+
+---- Entering directory: http://10.0.2.10:80/manual/ko/ssl/ ----
++ http://10.0.2.10:80/manual/ko/ssl/index.html (CODE:200|SIZE:5273)
+
+---- Entering directory: http://10.0.2.10:80/manual/ru/developer/ ----
++ http://10.0.2.10:80/manual/ru/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/ru/faq/ ----
++ http://10.0.2.10:80/manual/ru/faq/index.html (CODE:200|SIZE:3878)
+
+---- Entering directory: http://10.0.2.10:80/manual/ru/howto/ ----
++ http://10.0.2.10:80/manual/ru/howto/index.html (CODE:200|SIZE:8859)
+
+---- Entering directory: http://10.0.2.10:80/manual/ru/misc/ ----
++ http://10.0.2.10:80/manual/ru/misc/index.html (CODE:200|SIZE:5384)
+
+---- Entering directory: http://10.0.2.10:80/manual/ru/mod/ ----
++ http://10.0.2.10:80/manual/ru/mod/index.html (CODE:200|SIZE:23574)
+
+---- Entering directory: http://10.0.2.10:80/manual/ru/programs/ ----
++ http://10.0.2.10:80/manual/ru/programs/index.html (CODE:200|SIZE:6971)
+
+---- Entering directory: http://10.0.2.10:80/manual/ru/ssl/ ----
++ http://10.0.2.10:80/manual/ru/ssl/index.html (CODE:200|SIZE:5273)
+
+---- Entering directory: http://10.0.2.10:80/manual/tr/developer/ ----
++ http://10.0.2.10:80/manual/tr/developer/index.html (CODE:200|SIZE:6172)
+
+---- Entering directory: http://10.0.2.10:80/manual/tr/faq/ ----
++ http://10.0.2.10:80/manual/tr/faq/index.html (CODE:200|SIZE:3887)
+
+---- Entering directory: http://10.0.2.10:80/manual/tr/howto/ ----
++ http://10.0.2.10:80/manual/tr/howto/index.html (CODE:200|SIZE:8859)
+
+---- Entering directory: http://10.0.2.10:80/manual/tr/misc/ ----
++ http://10.0.2.10:80/manual/tr/misc/index.html (CODE:200|SIZE:5616)
+
+---- Entering directory: http://10.0.2.10:80/manual/tr/mod/ ----
++ http://10.0.2.10:80/manual/tr/mod/index.html (CODE:200|SIZE:23854)
+
+---- Entering directory: http://10.0.2.10:80/manual/tr/programs/ ----
++ http://10.0.2.10:80/manual/tr/programs/index.html (CODE:200|SIZE:7476)
+
+---- Entering directory: http://10.0.2.10:80/manual/tr/ssl/ ----
++ http://10.0.2.10:80/manual/tr/ssl/index.html (CODE:200|SIZE:5419)
+
+---- Entering directory: http://10.0.2.10:80/manual/zh-cn/developer/ ----
++ http://10.0.2.10:80/manual/zh-cn/developer/index.html (CODE:200|SIZE:6218)
+
+---- Entering directory: http://10.0.2.10:80/manual/zh-cn/faq/ ----
++ http://10.0.2.10:80/manual/zh-cn/faq/index.html (CODE:200|SIZE:3846)
+
+---- Entering directory: http://10.0.2.10:80/manual/zh-cn/howto/ ----
++ http://10.0.2.10:80/manual/zh-cn/howto/index.html (CODE:200|SIZE:6845)
+
+---- Entering directory: http://10.0.2.10:80/manual/zh-cn/misc/ ----
++ http://10.0.2.10:80/manual/zh-cn/misc/index.html (CODE:200|SIZE:5084)
+
+---- Entering directory: http://10.0.2.10:80/manual/zh-cn/mod/ ----
++ http://10.0.2.10:80/manual/zh-cn/mod/index.html (CODE:200|SIZE:23455)
+
+---- Entering directory: http://10.0.2.10:80/manual/zh-cn/programs/ ----
++ http://10.0.2.10:80/manual/zh-cn/programs/index.html (CODE:200|SIZE:6904)
+
+---- Entering directory: http://10.0.2.10:80/manual/zh-cn/ssl/ ----
++ http://10.0.2.10:80/manual/zh-cn/ssl/index.html (CODE:200|SIZE:5265)
+
+-----------------
+END_TIME: Fri Jul 26 13:02:45 2024
+DOWNLOADED: 387408 - FOUND: 85

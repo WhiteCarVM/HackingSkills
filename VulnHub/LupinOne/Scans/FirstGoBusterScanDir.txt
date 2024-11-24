@@ -1,0 +1,3 @@
+/image               [36m (Status: 301)[0m [Size: 306][34m [--> http://10.0.2.10/image/][0m
+/manual              [36m (Status: 301)[0m [Size: 307][34m [--> http://10.0.2.10/manual/][0m
+/javascript          [36m (Status: 301)[0m [Size: 311][34m [--> http://10.0.2.10/javascript/][0m
