@@ -1,0 +1,46 @@
+С помощью netdiscover я узнал(ip_address.png):
+IP-адрес цели: 10.0.2.8
+
+Дальше использовал nmap и узнал следующую информацию(nmapscan.png):
+
+MAC Address: 08:00:27:C3:56:9D (Oracle VirtualBox virtual NIC)
+Service Info: Host: 127.0.0.1; OS: Unix
+
+	На цели открыты порты:
+1. 21/tcp open  ftp ttl 64 vsftpd 3.0.3:
+
+Я могу проэксплуатировать vsftpd (для него есть эксплоит в exploit-db)б но это может привести к удаленной DOS. 
+(vsftpd.png)
+Попытка провалена(ошибки эксплоита) -- попробовать позже еще раз.
+
+2. 80/tcp open  http 64 Apache httpd 2.4.18 (site0.png -- site1.png):
+
+Файл robots.txt отсутствует. Я узнал точную операционную систему(ubuntu)(os_version.png)
+С помощью gobuster удалось найти только одну директорию (/site). Я использовал словарь /usr/share/wordlists/dirbuster/dir/usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt.
+
+На сайте есть страница, на которой выполняются  команды bash (buscar.png).
+Из этой страницы я узнал пароли (passwords.png, passwd) и имя пользователя (user.png) -- jangow01.
+
+проводя анализ директория я натркулся на следующую информацию(директория /var/www/html/ скрытый файл .backup): 
+
+$servername = "localhost"; $database = "jangow01"; $username = "jangow01"; $password = "abygurl69"; // Create connection $conn = mysqli_connect($servername, $username, $password, $database); // Check connection if (!$conn) { die("Connection failed: " . mysqli_connect_error()); } echo "Connected successfully"; mysqli_close($conn); 
+
+С помощью данных jangow01 -- abygurl69 я смог получить доступ к ftp серверу (ftp.png)
+На серверы установлены такие инструменты, как nmap (!!!Опасно!!!)
+Я получил файл user.txt, в котором хранится первый флаг -- d41d8cd98f00b204e9800998ecf8427e .
+
+
+С помощью этих данных я зашел на машину и узнал версия ядра -- 4.4.0-31-generic. 
+
+Для повышения привелегий я использовал PwnKit -- https://github.com/ly4k/PwnKit .
+Собрал экэсплоит -- gcc -shared PwnKit.c -o PwnKit -Wl,-e,entry -fPIC
+перебросил эксплоит на цель -- /home/jangow01 (exploit.png), но потербеп неудачу -- незапуск эксплоита.
+
+Дальше я нашел эксплоит ядра -- https://www.exploit-db.com/exploits/45010 (exploit2.c) и использовал его -- я получил root.
+в домашней директории root был файл proof.txt.
+На сервере установлен python3 (!!!Опасно!!!), с помощью модуля pty я получил интерактивный шелл.
+
+Содержимое файла: рисунок и сам флаг: da39a3ee5e6b4b0d3255bfef95601890afd80709.
+
+
+РЕШЕНИЕ ОКОНЧЕНО !!!
