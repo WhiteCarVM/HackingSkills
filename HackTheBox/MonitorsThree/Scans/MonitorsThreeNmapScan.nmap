@@ -1,0 +1,13 @@
+# Nmap 7.94SVN scan initiated Tue Dec  3 10:01:15 2024 as: /usr/lib/nmap/nmap --privileged -sS -sV --top-ports=10000 -T4 -v -oN MonitorsThreeNmapScan.nmap 10.10.11.30
+Nmap scan report for 10.10.11.30
+Host is up (0.10s latency).
+Not shown: 8365 closed tcp ports (reset)
+PORT     STATE    SERVICE VERSION
+22/tcp   open     ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)
+80/tcp   open     http    nginx 1.18.0 (Ubuntu)
+8084/tcp filtered websnp
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec  3 10:01:38 2024 -- 1 IP address (1 host up) scanned in 23.32 seconds

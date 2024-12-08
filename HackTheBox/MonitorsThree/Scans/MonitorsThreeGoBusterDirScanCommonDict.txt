@@ -1,0 +1,6 @@
+/admin               [36m (Status: 301)[0m [Size: 178][34m [--> http://monitorsthree.htb/admin/][0m
+/css                 [36m (Status: 301)[0m [Size: 178][34m [--> http://monitorsthree.htb/css/][0m
+/fonts               [36m (Status: 301)[0m [Size: 178][34m [--> http://monitorsthree.htb/fonts/][0m
+/images              [36m (Status: 301)[0m [Size: 178][34m [--> http://monitorsthree.htb/images/][0m
+/index.php           [32m (Status: 200)[0m [Size: 13560]
+/js                  [36m (Status: 301)[0m [Size: 178][34m [--> http://monitorsthree.htb/js/][0m
